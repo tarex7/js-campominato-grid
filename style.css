@@ -24,3 +24,8 @@ body {
   line-height: 45px;
   text-align: center;
 }
+
+.clicked {
+    background-color:rgb(26, 60, 154);
+    color: #fff;
+}

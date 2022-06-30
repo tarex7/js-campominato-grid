@@ -1,6 +1,8 @@
 let rows = 10;
 let cells = 10;
 let totalCells = rows * cells;
+
+//Elementi UI
 const grid = document.getElementById("grid");
 const startBtn = document.getElementById("startBtn");
 
@@ -13,7 +15,14 @@ const createCell = (content) => {
   cell.className = "cell";
   //Inserisce numero cella
   cell.innerText = content;
-  
+  //Aggiunge event listener
+  cell.addEventListener("click", (e) => {
+    //Aggiunge classe "clicked"
+    e.target.classList.toggle("clicked");
+    //Log numero cella
+    console.log(`Hai cliccato sulla cella numero ${e.target.innerText}`);
+  });
+
   grid.appendChild(cell);
 };
 
