@@ -1,3 +1,8 @@
+:root {
+  --rows: 10;
+  --cells: 10;
+}
+
 .debug {
   border: 1px red solid;
 }
@@ -11,14 +16,15 @@ body {
   flex-wrap: wrap;
   margin: 50px auto;
   width: 500px;
+  height: 500px;
   justify-content: center;
   border-radius: 5px;
 }
 
 .cell {
   border: 1px #000 solid;
-  width: calc(100% / 10 - 2px);
-  height: 48px;
+  width: calc(100% / var(--rows));
+  height: calc(100% / var(--cells));
   background-color: rgb(255, 255, 255);
   cursor: pointer;
   line-height: 45px;
@@ -26,6 +32,6 @@ body {
 }
 
 .clicked {
-    background-color:rgb(26, 60, 154);
-    color: #fff;
+  background-color: rgb(26, 60, 154);
+  color: #fff;
 }
