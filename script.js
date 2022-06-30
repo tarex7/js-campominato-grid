@@ -1,7 +1,6 @@
 let rows = 10;
 let cells = 10;
 let totalCells = rows * cells;
-let gameHasStarted = false;
 
 //Elementi UI
 const grid = document.getElementById("grid");
@@ -15,6 +14,7 @@ const createCell = (content) => {
   const cell = document.createElement("div");
   //Aggiunge classe
   cell.className = "cell";
+
   //Inserisce numero cella
   cell.innerText = content;
   //Aggiunge event listener
@@ -28,6 +28,7 @@ const createCell = (content) => {
   grid.appendChild(cell);
 };
 //Event button
+
 startBtn.addEventListener("click", () => {
   if (level.value == 2) {
     document.documentElement.style.setProperty("--rows", `9`);
@@ -37,14 +38,13 @@ startBtn.addEventListener("click", () => {
     document.documentElement.style.setProperty("--rows", `7`);
     document.documentElement.style.setProperty("--cells", `7`);
     totalCells = 49;
+  } else if (level.value == 1) {
+    document.documentElement.style.setProperty("--rows", `10`);
+    document.documentElement.style.setProperty("--cells", `10`);
+    totalCells = 1000;
   }
 
-  if (!gameHasStarted) {
-    for (let i = 1; i <= totalCells; i++) {
-      createCell(i);
-    }
-    gameHasStarted = true;
-  } else if (gameHasStarted) {
-    alert("Hai già cliccato, fai refresh pagina per rigiocare :P");
+  for (let i = 1; i <= totalCells; i++) {
+    createCell(i);
   }
 });

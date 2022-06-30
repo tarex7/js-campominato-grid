@@ -19,6 +19,7 @@ body {
   height: 500px;
   justify-content: center;
   border-radius: 5px;
+  overflow: hidden;
 }
 
 .cell {
@@ -34,4 +35,7 @@ body {
 .clicked {
   background-color: rgb(26, 60, 154);
   color: #fff;
+}
+#level .form-select {
+    width: 10%;
 }
