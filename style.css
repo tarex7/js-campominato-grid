@@ -1,24 +1,26 @@
 .debug {
-    border: 1px red solid;
+  border: 1px red solid;
 }
 
 body {
-    background-color:dodgerblue;
+  background-color: dodgerblue;
 }
 
 #grid {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 50px auto;
-    width: 500px;
-    justify-content: center;
-    border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px auto;
+  width: 500px;
+  justify-content: center;
+  border-radius: 5px;
 }
 
 .cell {
-    border: 1px #000 solid;
-    width: calc(100% / 10 - 2px );
-    height: 48px;
-    background-color:rgb(255, 255, 255);
-    cursor: pointer;
+  border: 1px #000 solid;
+  width: calc(100% / 10 - 2px);
+  height: 48px;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+  line-height: 45px;
+  text-align: center;
 }

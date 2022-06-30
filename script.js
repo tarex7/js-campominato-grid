@@ -4,10 +4,22 @@ let totalCells = rows * cells;
 const grid = document.getElementById("grid");
 const startBtn = document.getElementById("startBtn");
 
+//FUNZIONI
+//Crea cella
+const createCell = (content) => {
+  //Crea elemento
+  const cell = document.createElement("div");
+  //Aggiunge classe
+  cell.className = "cell";
+  //Inserisce numero cella
+  cell.innerText = content;
+  
+  grid.appendChild(cell);
+};
+
+//Crea "totalCells" celle
 startBtn.addEventListener("click", () => {
   for (let i = 1; i <= totalCells; i++) {
-    const cell = document.createElement("div");
-    cell.className = "cell";
-    grid.appendChild(cell);
+    createCell(i);
   }
 });
