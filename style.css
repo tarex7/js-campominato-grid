@@ -6,7 +6,7 @@ body {
     background-color:dodgerblue;
 }
 
-.grid {
+#grid {
     display: flex;
     flex-wrap: wrap;
     margin: 50px auto;
